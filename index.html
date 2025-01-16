@@ -3,63 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Tristan Haefner - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">My Portfolio</div>
+ 
+    
+    <header class="header">
+        <nav>
+            
             <ul class="nav-links">
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a class="active" href="#projects">PROJECTS</a></li>
+                <li><a  href="#contact">CONTACT</a></li>
             </ul>
         </nav>
-    </header>
-
-    <main>
-        <section id="projects" class="projects-section">
-            <h1>My Projects</h1>
-            <div class="project-grid">
-                <div class="project-card" onclick="openProject(1)">
-                    <img src="project1-cover.jpg" alt="Project 1 Cover">
-                    <h3>Project 1</h3>
-                    <p>A brief description of Project 1.</p>
-                </div>
-                <div class="project-card" onclick="openProject(2)">
-                    <img src="project2-cover.jpg" alt="Project 2 Cover">
-                    <h3>Project 2</h3>
-                    <p>A brief description of Project 2.</p>
-                </div>
-           
-
-                
-                <!-- Additional project cards as needed -->
+        
+        <div class="intro-section">
+            <img src="profil_picture.jpg" alt="Picture of Tristan Haefner">
+            <div class="intro-text">
+                <p class="welcome ">
+                    Welcome to my portfolio! </p>
+                <p>Hey there! <br> I'm Tristan - A creative mind with a passion for aesthetics and visual storytelling. 
+                    My work combines innovative design with a refined sense of style, bringing unique ideas to life with clarity and artistic flair.
+                </p>
             </div>
+        </div>
+        
+        <h1 id="projects">PROJECTS</h1>
+        <hr>
+
+    </header>
+    <main class="main">
+        
+        <section id="projects" class="project-grid">
+            <div class="project-tile" onclick="openProject('project1')">
+                <img src="Free_Grid_Box_1.jpg" alt="Project 1" />
+                <h2>LUMORA</h2>
+                <p>Brand Identity & Package-Design </p>
+            </div>
+            <div class="project-tile" onclick="openProject('project2')">
+                <img src="Free_Grid_Box_1.jpg" alt="Project 2" />
+                <h2>Project 2</h2>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="project-tile" onclick="openProject('project3')">
+                <img src="Free_Grid_Box_1.jpg" alt="Project 3" />
+                <h2>Project 3</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            </div>
+            <div class="project-tile" onclick="openProject('project4')">
+                <img src="Free_Grid_Box_1.jpg" alt="Project 4" />
+                <h2>Project 4</h2>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+            </div>
+            <div class="project-tile" onclick="openProject('project5')">
+                <img src="Free_Grid_Box_1.jpg" alt="Project 5" />
+                <h2>Project 5</h2>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+            </div>
+            <div class="project-tile" onclick="openProject('project6')">
+                <img src="Free_Grid_Box_1.jpg" alt="Project 6" />
+                <h2>Project 6</h2>
+                <p>Velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="project-tile" onclick="openProject('project7')">
+                <img src="Free_Grid_Box_1.jpg" alt="Project 7" />
+                <h2>Project 7</h2>
+                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+            <div class="project-tile" onclick="openProject('project8')">
+                <img src="Free_Grid_Box_1.jpg" alt="Project 8" />
+                <h2>Project 8</h2>
+                <p>Labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+            
+        <button id="scrollToTopBtn" class="scroll-to-top" href="header">
+                &uarr;
+        </button>
+
         </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Send</button>
-            </form>
+        <section id="contact" class="contact-section">
+            <h2>CONTACT</h2>
+            <p>If you'd like to get in touch, feel free to reach out via email or connect on social media.</p>
+            <ul class="contact-info">
+                <li><a href="mailto:tristan.haefner99@icloud.com" class="fa fa-envelope"  style="font-size:36px "></a> <a href="mailto:tristan.haefner99@icloud.com" >tristan.haefner99@icloud.com</a></li>
+                <li><a href="https://www.linkedin.com/in/tristan-haefner/" class="fa fa-linkedin-square" target="_blank" style="font-size:36px "></a> <a href="https://www.linkedin.com/in/tristan-haefner/" target="_blank" >@tristan-haefner</a></li>
+                <li><a href="https://github.com/tristan-haefner" class="fa fa-github" style="font-size:36px " target="_blank"></a> <a href="https://github.com/tristan-haefner" target="_blank">@tristan-haefner</a></li>
+            </ul>
         </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <div id="project-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="close-button" onclick="closeProject()">&times;</button>
+            <div id="project-details">
+                <!-- Placeholder for dynamic project content -->
+                <div id="project1" class="project-description hidden">
+                    <h2>LUMORA </h2>
+                    <p>This is a detailed description of Project 1. Here you can add more images, links, or other content related to the project.</p>
+                    <img src="./lumora/Showcase_00.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-02.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-03.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-04.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-05.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-06.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-07.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-08.jpg" alt="Project 1" />
+                </div>
+                <!-- Placeholder for dynamic project content -->
+                <div id="project2" class="project-description hidden">
+                    <h2>Project 2</h2>
+                    <p>This is a detailed description of Project 2. Include any relevant details or media here.</p>
+                    <img src="./lumora/Showcase_00.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-02.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-03.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-04.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-05.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-06.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-07.jpg" alt="Project 1" />
+                    <img src="./lumora/Showcase-08.jpg" alt="Project 1" />
+                </div>
+                <div id="project3" class="project-description hidden">
+                    <h2>Project 3</h2>
+                    <p>Detailed information about Project 3 goes here, with space for additional content or links.</p>
+                </div>
+                <!-- Add more project descriptions as needed -->
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
