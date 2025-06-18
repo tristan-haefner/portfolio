@@ -1,0 +1,531 @@
+/* Reset and basic styling */
+html{
+    scroll-behavior: smooth;
+
+}
+
+
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #646464;}
+::-webkit-resizer { background-color: #666;}
+
+
+body {
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #0F0F0F;
+    /*background-image:  linear-gradient(#27272754 2px, transparent 2px), linear-gradient(90deg, #27272754 2px, transparent 2px), linear-gradient(#27272754 1px, transparent 1px), linear-gradient(90deg, #27272754 1px, #000000 1px);
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    background-attachment: fixed;*/
+    background-image: url(grainy-background_orange.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: fixed;
+    
+}
+
+body.about_page{
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #0F0F0F;
+    /*background-image:  linear-gradient(#27272754 2px, transparent 2px), linear-gradient(90deg, #27272754 2px, transparent 2px), linear-gradient(#27272754 1px, transparent 1px), linear-gradient(90deg, #27272754 1px, #000000 1px);
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    background-attachment: fixed;*/
+    background-image: url(grainy-background_about.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+hr{
+  
+    max-width: 1600px;
+}
+
+/* HEADER UND NAVI */
+
+/* === NEU: Layout der Top‑Navigation === */
+.top-nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between; /* linke – mitte – rechte Gruppe */
+    max-width:1980px;
+    margin:0 auto;
+}
+
+.nav-left,
+.nav-right{
+    display:flex;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.nav-left li,
+.nav-right li{
+    margin:0 0.75rem;
+}
+
+.nav-left li a,
+.nav-right li a{
+    color:#000000;
+    text-decoration:none;
+    font-family: "Space Mono", monospace;
+    font-weight:400;
+    font-style: normal;
+ 
+
+}
+
+.nav-right li a{
+   border-style: groove;
+    border-color: #000000;
+    padding: 5px;
+}
+.nav-right li a:hover{
+   border-style: groove;
+    border-color: #f97d16;
+}
+
+.nav-right a:hover{
+text-decoration: underline;
+}
+
+/* Logo */
+
+.nav-logo img{
+    max-width: 200px;
+    margin-right: 70px;    
+}
+
+/* Mobile / kleine Breite: Elemente stapeln */
+@media (max-width:768px){
+    .top-nav{
+        flex-direction:column;
+        gap:0.75rem;
+    }
+}
+
+
+
+
+.nav-links li a, .nav-left li a:hover {
+    text-decoration: underline;
+}
+
+header h1{
+    font-optical-sizing: auto;
+    margin-top: 4rem;
+    font-weight: 800;
+    color: #a000c0;
+    font-family: "Space Mono", monospace;
+    font-weight:400;
+    font-style: normal;
+    }
+
+    .header{
+        text-align: center;
+        padding: 3rem;
+        color: #e0e0e0;
+    }
+/* INTRODUCE */
+
+.intro-section {
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    padding-bottom:  3rem;
+    max-width: 1600px;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.intro-section img {
+    max-width: 40%;
+    object-fit: cover;
+}
+
+.intro-text {
+    color:#000;
+    font-family: "Montserrat", serif;
+    font-size: 1.1rem;
+    line-height: 1.8; 
+}
+
+.intro-text::after{
+    color: rgb(0, 255, 255); 
+
+    mix-blend-mode: difference;
+}
+
+.intro-section .welcome{
+    color:#000000;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: "Space Mono", monospace;
+    font-weight:400;
+    font-style: normal;
+
+
+}
+
+.welcome_title{
+ font-family: "Space Mono", monospace;
+    font-weight:400;
+    font-style: normal;
+    width: 200px;
+}
+
+
+/* PROJECT GRID */
+
+.main {
+    padding: 1rem;
+    display: block; /* Ensure sections stack vertically */
+    font-family: "Space Mono", monospace;
+        font-style: normal;
+}
+
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(500px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto; /* Center content */
+}
+
+@media  (max-width: 1980px) {
+    .project-grid{
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+
+    }
+}
+
+.project-tile{
+     opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.project-tile.visible {
+    opacity: 1;
+    transform: translateY(0);
+    cursor: pointer;
+}
+
+
+.project-tile img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.cover_img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.cover_img_overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #000000b4;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: .5s all;   
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.project-tile:hover .cover_img_overlay{
+    height: 100%;
+    opacity: 1;
+
+}
+
+.cover_img_text{
+    color: rgb(255, 255, 255);
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.cover_img_text p{
+    font-size: 18px;
+}
+
+
+/* CONTACT SECTION */
+
+.contact-section {
+    max-width: 1980px;
+    margin:  auto;
+    margin-top: 5rem;
+    border-radius: 8px;
+    text-align: center;
+    color:  #fff;
+    justify-content: center;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.29);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+
+.contact-section h2{
+    color: #f97d16;
+    font-size: 2rem;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    padding-top: 1rem;
+}
+
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 2rem;
+}
+
+.contact-info li {
+    margin: 0.5rem 0;
+    color: #ffffff;
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.contact-section p{
+    color: #0F0F0F;
+    font-weight: 400;
+    font-family: dm-sans, sans-serif;
+
+}
+
+.contact-info .fa{
+    padding-left: 2rem;
+    color: #f97d16;
+
+}
+.contact-info li a{
+    color:  #0F0F0F;
+    padding-top: 1rem;
+    text-decoration: none;
+    
+}
+
+.contact-info li a:hover{
+    text-decoration: underline;
+}
+
+
+/* MODAL PROJECT CONTENT HERE */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    
+
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #fff8ee;
+    border-radius: 8px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-width: 1600px;
+
+}
+
+
+
+.modal-content h2{
+    color: #f97d16;
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 400;
+    padding: 1rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.modal-content p{
+    color: #141414;
+    font-family: "Space Mono", monospace;
+    font-style: thin;
+    padding: 1rem;
+}
+
+
+.modal-content h3{
+    color: #000000;
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-left: 2rem;
+    position: relative;
+    top: -4rem;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #a000c0;
+}
+
+.close-button:hover{
+    color: #141414;
+}
+
+
+/* PROJECTS CONTENT TEXT/ LEFT SIDE*/
+#project3{
+    
+
+}
+
+.showcase_grid{
+    display: grid;
+    max-width: 100%;
+      grid-template-columns: 1fr 2fr;
+}
+
+
+
+/* PROJECT CONTENT IMG */
+
+
+
+#project1 img{
+    max-width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#project2 img{
+    max-width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#project3 img{
+    max-width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#project4 img{
+    max-width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* SCROLL TO TOP  */
+
+.scroll-to-top {
+    position: absolute; /* Position relativ zum nächsten positionierten Element (body) */
+    bottom: 27rem; /* Abstand vom unteren Rand */
+    left: 50%; /* Zentriert die linke Kante */
+    transform: translateX(-50%); /* Korrigiert die Zentrierung auf die Mitte */
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #000000;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.scroll-to-top:hover {
+    background-color: #f97d16;
+    color: #ffffff;
+}
+
+
+body {
+    position: relative; /* Erlaubt absolute Positionierung relativ zum Body */
+}
+
+
+/* ABOUT ME SECTION  */
+
+
+.intro-section-about{
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    padding-bottom:  3rem;
+    max-width: 1900px;
+    margin: auto;
+    margin-top: 1rem;
+    font-family: "Space Mono", monospace;
+
+    text-align: left;
+
+}
+.intro-section-about img {
+    max-width: 20%;
+    object-fit: cover;
+}
+
+.textblock{
+    block-size: 100px;
+}
+
+
