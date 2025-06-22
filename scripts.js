@@ -1,15 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const projectTiles = document.querySelectorAll(".project-tile");
+    const fadeIn = document.querySelectorAll(".fade-in");
     const modal = document.getElementById("project-modal");
     const projectDetails = document.getElementById("project-details");
     const closeButton = document.querySelector(".close-button");
+    const toggleBtn = document.getElementById('darkmode-toggle');
+    const body = document.body;
 
     // Open project modal
   window.openProject = (projectId) => {
   const projectDescription = document.getElementById(projectId);
   if (projectDescription) {
     // Neu: versteckt alle Kinder von #project-details
-    projectDetails.querySelectorAll("div").forEach((desc) => {
+    projectDetails.querySelectorAll(".project-description").forEach((desc) => {
       desc.classList.add("hidden");
     });
 
@@ -23,9 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
   modal.querySelector(".modal-content").scrollTop = 0;
 
 };
-
-
-
     
     // Close project modal
     window.closeProject = () => {
@@ -47,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     );
 
-    projectTiles.forEach((tile) => {
-        observer.observe(tile);
+          fadeIn.forEach((tile) => {
+          observer.observe(tile);
     });
 
     // Close modal on overlay click
