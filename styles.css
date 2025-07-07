@@ -29,7 +29,7 @@ body {
     background-attachment: fixed;*/
     background-image: url(assets/grainy-background_orange.jpg);
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
     position: fixed;
 
     
@@ -46,6 +46,11 @@ body.about_page{
     background-image: url(assets/grainy-background_about.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+}
+
+body.contact_page{
+    background-color: #f97d16;
+    background-image: none;
 }
 
 hr{
@@ -327,7 +332,6 @@ header h1{
     max-width: 1980px;
     margin:  auto;
     margin-top: 5rem;
-    border-radius: 8px;
     text-align: center;
     color:  #fff;
     justify-content: center;
@@ -364,6 +368,7 @@ header h1{
     font-style: normal;
     font-size: 1rem;
     font-weight: 400;
+
 }
 
 .contact-section p{
@@ -388,6 +393,59 @@ header h1{
 .contact-info li a:hover{
     text-decoration: underline;
 }
+
+.contact_field{
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    width: 90%;
+    margin:  auto;
+    margin-top: 5rem;
+    color:  #fff;
+    /* From https://css.glass */
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    display:flex;
+    padding-top: 5%;
+}
+
+.contact_field h2{
+    color: #FFFAFA;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.contact_field p{
+    font-weight: 500;
+    color: #000;
+    text-align: left;
+}
+
+.contact_left{
+    width: 100%;
+    position: relative;
+    
+}
+
+.contact_right{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    position: relative;
+    background-color: #fffafa61;
+    border-radius: 16px;
+}
+
+.contact_right .contact-info{
+    margin-left: 20%;
+}
+
+.contact_right .contact-info .fa{
+    color: #FFFAFA;
+    
+}
+
+
 
 
 /* MODAL PROJECT CONTENT HERE */
