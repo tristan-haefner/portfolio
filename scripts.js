@@ -72,7 +72,21 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     
+    document.querySelector('.nav-logo').addEventListener('click', showSidebar)
 
+    function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+    
+
+    document.querySelector('.sidebar').addEventListener('click', hideSidebar)
+
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+
+    }
 
     
 
