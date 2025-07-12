@@ -1,3 +1,5 @@
+console.log("JS loaded");
+
 document.addEventListener("DOMContentLoaded", () => {
     const fadeIn = document.querySelectorAll(".fade-in");
     const modal = document.getElementById("project-modal");
@@ -87,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         sidebar.style.display = 'none'
 
     }
+    
 
     
 

@@ -26,7 +26,8 @@ body {
     background-color: #fff;
     /*background-image:  linear-gradient(#27272754 2px, transparent 2px), linear-gradient(90deg, #27272754 2px, transparent 2px), linear-gradient(#27272754 1px, transparent 1px), linear-gradient(90deg, #27272754 1px, #000000 1px);
     background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-    background-attachment: fixed;*/
+    */
+    background-attachment: fixed;
     background-image: url(assets/grainy-background_orange.jpg);
     background-size: 100%;
     background-repeat:no-repeat;
@@ -79,7 +80,10 @@ hr{
     margin: 0 auto;
 
 }
-
+.sidebar.show{
+    display: flex;
+    flex-direction: column;
+}
 .sidebar li{
     width: 100%;
     height: 50px;
@@ -157,23 +161,31 @@ hr{
     margin-right: 70px;    
 }
 
+.nav-logo a {
+    align-items: left;
+}
 /* Mobile / kleine Breite: Elemente stapeln */
 @media (max-width:600px){
+
+/* CONTACT  */
+
+
+/* INDEX */
 
     body{
         background-size: auto;
         max-width: 100%;
     }
+
+    .scroll-to-top{
+    margin-bottom: -60px;
+    }
     .top-nav{
         display: flex;
-        align-items: end;
         flex-direction:column;
     }
 
-    .nav-logo img{
-        max-width: 150px;
-        display: flex;
-    }
+ 
 
      .hideOnMobile{
         display: none;
@@ -183,16 +195,32 @@ hr{
     .nav-logo{
         display: flex;
         flex-direction: row;
-          text-decoration: none;
+        text-decoration: none;
         list-style: none;
+        width: 100%;
+        justify-content: space-between;
     }
+
+    .nav-logo img{
+    width: 150px;
+    }
+
+   
 
     .intro-section .intro-text p {
     font-size: 1rem;    
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
     }
 
     .intro-section img{
-        width: 100%;
+    display: none; 
+   }
+
+    .intro-section{
+    justify-content: center;
+
     }
 
     .modal-content {
@@ -223,14 +251,36 @@ hr{
     .project-content{
     margin-top: 20%;
     width: 100%;
+    }  
+
+        .main .project-grid{
+        max-width: 80%;
+        grid-template-columns: repeat(auto-fill , minmax(500px, 1fr));
+        display: flex;
+        flex-direction: column;
+        gap: none;
+        height: 0 auto;
     }
 
+    .contact-section {
+    width: 80%;
+   
+   }
+
+   .contact-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+   }
+
+    .contact-section p{
+    display: none;    
+    }
+
+   
+
     
-
-}
-
-
-
 
     .project-content{
     position: relative;
@@ -246,16 +296,9 @@ hr{
         display: flex;
     }
 
+    
 
-    .main .project-grid{
-        max-width: 100%;
-         grid-template-columns: repeat(auto-fill , minmax(100%, 1fr));
-        display: flex;
-        flex-direction: column;
-        gap: none;
-        height: 0 auto;
-    }
-
+}
 
 
 @media (min-width: 600px){
@@ -264,6 +307,7 @@ hr{
       
     }
 }
+
 
 .header{
     padding: 3rem;
@@ -300,7 +344,8 @@ hr{
     color:#000;
     font-family: "Montserrat", serif;
     font-size: 1.1rem;
-    line-height: 1.8; 
+    line-height: 1.8;
+    align-items: center;
 }
 
 .intro-text::after{
@@ -309,7 +354,7 @@ hr{
     mix-blend-mode: difference;
 }
 
-.intro-section .welcome{
+.intro-section .wellcome{
     color:#000000;
     text-transform: uppercase;
     font-size: 2rem;
@@ -339,9 +384,9 @@ hr{
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fill , minmax(200px, 1fr));
     gap: 2rem;
-    max-width: 1400px;
+    max-width: 90%;
     margin: 0 auto; /* Center content */
 }
 
@@ -444,14 +489,20 @@ hr{
 }
 
 
+
 /* CONTACT SECTION */
 
-.contact-section {
+.impressum{
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    justify-items: center;
+}
+
+.contact-section_about {
     max-width: 1980px;
-    margin:  auto;
-    margin-top: 5rem;
+    margin:  0 auto;
     text-align: center;
-    color:  #fff;
     justify-content: center;
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.29);
@@ -462,14 +513,33 @@ hr{
     border: 1px solid rgba(255, 255, 255, 0.26);
 }
 
+.contact-section {
+    max-width: 90%;
+    margin:  0 auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    color:  #fff;
+    justify-content: center;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.29);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    font-weight: bold;
+
+}
+
 
 .contact-section h2{
-    color: #f97d16;
-    font-size: 2rem;
+    color: #000000;
+    font-size: 1.5rem;
     font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     padding-top: 1rem;
+
 }
 
 
@@ -477,6 +547,9 @@ hr{
     list-style: none;
     padding: 0;
     padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .contact-info li {
@@ -492,7 +565,8 @@ hr{
 .contact-section p{
     color: #0F0F0F;
     font-weight: 400;
-    font-family: dm-sans, sans-serif;
+    font-family: "Space Mono", monospace;
+    font-size: 1em;
 
 }
 
@@ -781,11 +855,10 @@ body {
     display: flex;
     align-items: center;
     padding-bottom:  3rem;
-    max-width: 1900px;
+    max-width: 80%;
     margin: auto;
     margin-top: 1rem;
     font-family: "Space Mono", monospace;
-
     text-align: left;
 
 }
@@ -797,5 +870,3 @@ body {
 .textblock{
     block-size: 100px;
 }
-
-
