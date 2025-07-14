@@ -31,7 +31,6 @@ body {
     background-image: url(assets/grainy-background_orange.jpg);
     background-size: 100%;
     background-repeat:no-repeat;
-    position: fixed;
 
     
 }
@@ -168,11 +167,41 @@ hr{
 @media (max-width:600px){
 
 /* CONTACT  */
+  main .contact_field{
+    flex-direction: column;
+    justify-content: start;
+    display: flex;
+    width: 80%;
+}
+
+main .contact_field h2{
+    font-size: 1.3rem;
+}
+
+main .contact_text{
+    width: 100%;
+}
+
+main .contact_right{
+    width: 100%;
+    justify-content: center;
+}
+.contact_right ul{
+    width: 80%;
+}
+
+main .contact_left{
+    width: 100%;
+}
 
 
 /* INDEX */
 
     body{
+        background-size: auto;
+        max-width: 100%;
+    }
+     body.about_page{
         background-size: auto;
         max-width: 100%;
     }
@@ -266,12 +295,14 @@ hr{
     width: 80%;
    
    }
+  
 
    .contact-info{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
+
    }
 
     .contact-section p{
@@ -297,6 +328,31 @@ hr{
     }
 
     
+/* ABOUT PAGE */
+
+     body.about_page{
+        background-size: auto;
+        max-width: 100%;
+    }
+
+    .contact-section {
+    width: 80%;
+   
+   }
+  
+
+   .contact-section_about .contact-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+   }
+
+    .contact-section_about p{
+    display: none;    
+    }
+
 
 }
 
@@ -333,10 +389,11 @@ hr{
     margin: auto;
     margin-top: 1rem;
     text-align: left;
+    justify-content: center;
 }
 
 .intro-section img {
-    max-width: 40%;
+    max-width: 30%;
     object-fit: cover;
 }
 
@@ -365,6 +422,12 @@ hr{
 
 }
 
+.intro-section .slogan{
+    font-family: "Space Mono", monospace;
+        font-size: 0.9rem;
+
+}
+
 .welcome_title{
  font-family: "Space Mono", monospace;
     font-weight:400;
@@ -384,18 +447,16 @@ hr{
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill , minmax(600px, 1fr));
     gap: 2rem;
     max-width: 90%;
-    margin: 0 auto; /* Center content */
-}
-
+    margin: 0 auto; 
+    /* Center content
 @media  (max-width: 1980px) {
-    .project-grid{
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-
-    }
+     */
 }
+
+
 
 
 
@@ -500,7 +561,7 @@ hr{
 }
 
 .contact-section_about {
-    max-width: 1980px;
+    max-width: 90%;
     margin:  0 auto;
     text-align: center;
     justify-content: center;
@@ -511,6 +572,10 @@ hr{
     backdrop-filter: blur(4.9px);
     -webkit-backdrop-filter: blur(4.9px);
     border: 1px solid rgba(255, 255, 255, 0.26);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    position: relative;
+
 }
 
 .contact-section {
@@ -520,7 +585,6 @@ hr{
     margin-bottom: 5rem;
     text-align: center;
     color:  #fff;
-    justify-content: center;
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.29);
     border-radius: 16px;
@@ -529,8 +593,10 @@ hr{
     -webkit-backdrop-filter: blur(4.9px);
     border: 1px solid rgba(255, 255, 255, 0.26);
     font-weight: bold;
+    align-items: center;
 
 }
+
 
 
 .contact-section h2{
@@ -545,20 +611,25 @@ hr{
 
 .contact-info {
     list-style: none;
-    padding: 0;
     padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
+    padding-left: 0;
+
+}
+
+.contact-section ul{
 
 }
 
 .contact-info li {
-    margin: 0.5rem 0;
+    margin: 0.5rem ;
     color: #ffffff;
     font-family: "Space Mono", monospace;
     font-style: normal;
     font-size: 1rem;
     font-weight: 400;
+
 
 }
 
@@ -571,7 +642,6 @@ hr{
 }
 
 .contact-info .fa{
-    padding-left: 2rem;
     color: #f97d16;
 
 }
@@ -589,52 +659,88 @@ hr{
 .contact_field{
     font-family: "Space Mono", monospace;
     font-weight: 400;
-    width: 90%;
+    width: 80%;
     margin:  auto;
-    margin-top: 5rem;
     color:  #fff;
     /* From https://css.glass */
     backdrop-filter: blur(4.9px);
     -webkit-backdrop-filter: blur(4.9px);
     display:flex;
     padding-top: 5%;
+    margin-bottom: 3rem;
+    flex-direction: row;
 }
+
+.contact_text{
+    width: 90%;
+}
+
 
 .contact_field h2{
     color: #FFFAFA;
     font-size: 2rem;
     text-align: left;
+    
 }
 
 .contact_field p{
     font-weight: 500;
     color: #000;
     text-align: left;
+    padding-left: 0px;
 }
 
 .contact_left{
-    width: 100%;
-    position: relative;
+    width: 80%;
+
     
 }
-
+.contact_right ul{
+    width: 80%;
+}
 .contact_right{
     display: flex;
-    width: 80%;
-    margin: auto;
-    text-align: left;
-    position: relative;
     background-color: #fffafa61;
     border-radius: 16px;
+    width: 60%;
+    justify-content: center;
 }
 
-.contact_right .contact-info{
-    margin-left: 20%;
-}
+
 
 .contact_right .contact-info .fa{
     color: #FFFAFA;
     
+}
+
+.contact_leistungen{
+    max-width: 80%;
+    margin:  0 auto;
+    text-align: left;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        background-color: #fffafa1f;
+
+    border-radius: 16px;
+}
+
+.contact_leistungen li,p{
+    padding: 1rem;
+}
+.contact_leistungen h2{
+    font-family: "Space Mono", monospace;
+    font-weight:400;
+    font-style: normal;
+    padding: 1rem;
+
+}
+
+.textblock{
+    color: #f97d16;
 }
 
 
@@ -850,23 +956,81 @@ body {
 /* ABOUT ME SECTION  */
 
 
-.intro-section-about{
+.intro-section_about{
     border-radius: 32px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     padding-bottom:  3rem;
-    max-width: 80%;
+    width: 95%;
     margin: auto;
-    margin-top: 1rem;
-    font-family: "Space Mono", monospace;
+    margin-top: 2rem;
     text-align: left;
+    justify-content: center;
+
+    
 
 }
-.intro-section-about img {
-    max-width: 20%;
+.intro-section_about .wellcome{
+    color:#000000;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: "Space Mono", monospace;
+    font-weight:400;
+    font-style: normal;
+    
+}
+.intro-section_about img {
+    max-width: 100%;
     object-fit: cover;
 }
 
+
+
+.intro-text{
+    margin-left: 2rem;
+}
+
+.intro-text_about{
+    padding: 1rem;
+    margin-left: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+
+
+.about_text{
+    max-width: 90%;
+    margin:  0 auto;
+    text-align: left;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background: rgba(0, 0, 0, 0.449);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4.9px);
+
+    
+    border-radius: 16px;
+    color: white;
+}
+
+.about_text li,p{
+    padding: 1rem;
+}
+.about_text h2{
+    font-family: "Space Mono", monospace;
+    font-weight:400;
+    font-style: normal;
+    padding: 1rem;
+
+}
+
 .textblock{
-    block-size: 100px;
+    color: #f97d16;
 }
