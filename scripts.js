@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const fadeIn = document.querySelectorAll(".fade-in");
     const modal = document.getElementById("project-modal");
     const projectDetails = document.getElementById("project-details");
-    const closeButton = document.querySelector(".close-button");
+    const closeButton    = document.querySelector(".close-button");
     const toggleBtn = document.getElementById('darkmode-toggle');
     const body = document.body;
+    
 
     // Open project modal
   window.openProject = (projectId) => {
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.remove("hidden");
     document.body.style.overflow = "hidden";
     modal.querySelector(".modal-content").style.overflowY = "scroll";
-    modal.querySelector(".modal-content").style.maxHeight = "90vh";
+    modal.querySelector(".modal-content").style.maxHeight = "95vh";
   }
   modal.querySelector(".modal-content").scrollTop = 0;
 
@@ -89,6 +90,8 @@ document.addEventListener("DOMContentLoaded", () => {
         sidebar.style.display = 'none'
 
     }
+    
+    window.showSidebar = showSidebar; window.hideSidebar = hideSidebar;
     
 
     
