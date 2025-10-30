@@ -49,7 +49,7 @@ body.about_page{
 }
 
 body.contact_page{
-    background-color: #f97d16;
+    background-color: #202020;
     background-image: none;
 }
 
@@ -57,6 +57,10 @@ hr{
   
     max-width: 1600px;
 }
+
+
+
+
 
 /* HEADER UND NAVI */
 
@@ -93,10 +97,10 @@ hr{
 .sidebar a{
     width: 100%;
     list-style: none;
-    color: #e0e0e0;
     text-decoration: none;
-    color: #ffffff;
+    color: #1f1f1f;
     font-family: "Space Mono", monospace;
+    
 ;
 
 }
@@ -108,6 +112,12 @@ hr{
     justify-content:space-between; /* linke – mitte – rechte Gruppe */
     max-width:1980px;
     margin:0 auto;
+}
+
+
+top-nav.contact{
+        color: white;
+
 }
 
 .nav-left,
@@ -133,6 +143,16 @@ hr{
     font-weight:400;
     font-style: normal;
     
+}
+body.contact_page  a{
+    color: white;
+}
+
+body.contact_page .nav-right li a{
+    border-color: white;
+}
+body.contact_page .nav-right li a:hover{
+    background-color: #1d1d1d;
 }
 
 
@@ -711,14 +731,20 @@ main .contact_left{
 .contact_left{
     width: 80%;
 
-    
+}
+
+.contact_text p{
+        color: white;
+}
+.contact_left h2{
+        color: #f97d16;
 }
 .contact_right ul{
     width: 80%;
 }
 .contact_right{
     display: flex;
-    background-color: #fffafa61;
+    background-color: #53525261;
     border-radius: 16px;
     width: 60%;
     justify-content: center;
@@ -727,7 +753,7 @@ main .contact_left{
 
 
 .contact_right .contact-info .fa{
-    color: #FFFAFA;
+    color: #f97d16;
     
 }
 
@@ -988,14 +1014,13 @@ body {
     
 
 }
-.intro-section_about .wellcome{
+.intro-section_about .welcome{
     color:#000000;
     text-transform: uppercase;
     font-size: 2rem;
     font-family: "Space Mono", monospace;
     font-weight:400;
     font-style: normal;
-    
 }
 .intro-section_about img {
     max-width: 100%;
