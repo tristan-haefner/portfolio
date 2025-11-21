@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
 </head>
 <body class="contact_page fade-in">
  
@@ -31,7 +31,7 @@
        <nav class="top-nav" >
             
             <ul class="sidebar ">
-                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"  height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"  height="26px" viewBox="0 -960 960 960" width="26px" fill="#fff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
                 <li><a  href="index.html#projects">WORK</a></li>
                 <li><a  href="about.html">ÜBER MICH</a></li>
                 <li><a href="contact.html">KONTAKT</a></li>
@@ -46,11 +46,11 @@
             <div  class="nav-logo">
                 
                 <a href="index.html" ><img src="assets/logo.png" alt="Dein Logo" class="logo"/></a>
-                <li onclick="showSidebar()" class="hideOnDesktop"><a href="#" class="menu"><svg xmlns="http://www.w3.org/2000/svg"  height="34px" viewBox="0 -960 960 960" width="34px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                <li onclick="showSidebar()" class="hideOnDesktop"><a href="#" class="menu"><svg xmlns="http://www.w3.org/2000/svg"  height="34px" viewBox="0 -960 960 960" width="34px" fill="#fff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
 
             </div>
 
-            <ul class="nav-right">
+            <ul class="nav-right kontakt_button">
                 <li class="hideOnMobile"><a href="contact.html">KONTAKT</a></li>
 
             </ul>
@@ -59,9 +59,9 @@
          </header>
 
 
- <main class="main">
-        <section id="contact" class=" contact_field  fade-in">
-            <Div class="contact_left"> <h2>Auf der Suche nach kreativer Unterstützung?</h2>
+ <main class="contact_main">
+        <section id="contact" class=" contact_field_about  fade-in">
+            <Div class="contact_left kontakt_button"> <h2>Auf der Suche nach kreativer Unterstützung?</h2>
                 <div class="contact_text">
                   <p>Ich freue mich über deine Nachricht – ob konkrete Projektanfragen, erste Ideen oder einfach ein unverbindliches Kennenlernen. Schreib mir gerne, und wir schauen gemeinsam, was möglich ist!</p>
 
@@ -70,9 +70,11 @@
 
             <div class="contact_right">
                   <ul class="contact-info">
-                <li><a href="mailto:t.haefner-design@proton.me" class="fa fa-envelope"  style="font-size:36px "></a> <a href="mailto:t.haefner-design@proton.me" >t.haefner-design@proton.me</a></li>
-                <li><a href="https://www.linkedin.com/in/tristan-haefner/" class="fa fa-linkedin-square" target="_blank" style="font-size:36px "></a> <a href="https://www.linkedin.com/in/tristan-haefner/" target="_blank" >@tristan-haefner</a></li>
-                <li><a href="https://github.com/tristan-haefner" class="fa fa-github" style="font-size:36px " target="_blank"></a> <a href="https://github.com/tristan-haefner" target="_blank">@tristan-haefner</a></li>
+                    <P class="hideOnDesktop" style="font-style:oblique;">Hier kannst du mich ganz unverbindlich erreichen:</P>
+                <li><a href="mailto:t.haefner-design@proton.me" class="fa fa-envelope"  style="font-size:36px "></a> <a href="mailto:t.haefner-design@proton.me">E-Mail</a></li>
+                <li><a href="https://www.instagram.com/thaefner.design/" class="fa fa-instagram" target="_blank" style="font-size:36px "></a> <a href="https://www.instagram.com/thaefner.design/" target="_blank" >Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/tristan-haefner/" class="fa fa-linkedin-square" target="_blank" style="font-size:36px "></a> <a href="https://www.linkedin.com/in/tristan-haefner/" target="_blank" >LinkedIn</a></li>
+                <li><a href="https://github.com/tristan-haefner" class="fa fa-github" style="font-size:36px " target="_blank"></a> <a href="https://github.com/tristan-haefner" target="_blank">Github</a></li>
             </ul>
             </div>
 
@@ -80,13 +82,8 @@
             
                  
         </section>
-    
-                
-
-   
-   
-        
     </main>
+    
 <script src="scripts.js" >
     
 </script>

@@ -23,15 +23,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 </head>
-<body class="about_page">
+<body class="about_page ">
  
     
-    <header class="header">
+    <header class="header ">
 
         <nav class="top-nav">
             
             <ul class="sidebar fade-in">
-                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"  height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"  height="26px" viewBox="0 -960 960 960" width="26px" fill="#fff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
                 <li><a  href="index.html#projects">WORK</a></li>
                 <li><a  href="about.index">ÜBER MICH</a></li>
                 <li><a href="contact.html">KONTAKT</a></li>
@@ -46,11 +46,11 @@
             <div class="nav-logo">
                 
                 <a href="index.html" ><img src="assets/logo.png" alt="Dein Logo" class="logo"/></a>
-                <li onclick="showSidebar()" class="hideOnDesktop"><a href="#" class="menu"><svg xmlns="http://www.w3.org/2000/svg"  height="34px" viewBox="0 -960 960 960" width="34px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                <li onclick="showSidebar()" class="hideOnDesktop"><a href="#" class="menu"><svg xmlns="http://www.w3.org/2000/svg"  height="34px" viewBox="0 -960 960 960" width="34px" fill="#fff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
 
             </div>
 
-            <ul class="nav-right">
+            <ul class="nav-right kontakt_button">
                 <li class="hideOnMobile"><a href="contact.html">KONTAKT</a></li>
 
             </ul>
@@ -58,22 +58,31 @@
     </header>
 
 
-    <main class="main">
+    <main class="main_about">
     
         <div class="intro-section_about fade-in " >
-            <div>
-            <img src="assets/Profilbild.png" alt="Picture of Tristan Haefner">
+            <div class="spalten_layout">
+            <div class="aboutme_left">
+            <img src="assets/profilbild_test.png" alt="Picture of Tristan Haefner">
             </div>
             <div class="intro-text_about">
                 <p class="welcome ">
-                    ÜBER MICH </p>
-                <p class=" slogan" style="top: -20px; position: relative;">
-                Hi, Ich bin Tristan, Grafikdesigner aus Köln. Ursprünglich ausgebildet im Bereich Mediengestaltung, jetzt freiberuflicher, habe ich meine Leidenschaft für Gestaltung stetig weiterentwickelt – im Unternehmen selbst, als auch in der direkten Zusammenarbeit mit Unternehmen und Selbstständigen.                    
+                    "Kreativität ist Intelligenz, die Spaß hat"
+                    <p style="text-transform: none; color: #b4019f; margin-top: -55px; ">-Albert Einstein</p>
                 </p>
+                
+
+                <h2 class="about_text">ÜBER MICH</h2>
+                 <p style="margin-top: -40px; font-family: Montserrat, serif;">
+                    Hi, Ich bin Tristan, Grafikdesigner aus Köln. Ursprünglich ausgebildet im Bereich Mediengestaltung, jetzt freiberuflicher, habe ich meine Leidenschaft für Gestaltung stetig weiterentwickelt – im Unternehmen selbst, als auch in der direkten Zusammenarbeit mit Unternehmen und Selbstständigen.             
+                </p>
+                <h3 class="about_text">Mein Stil – lebendig, mutig und mit Charakter</h3>
+                <p style="margin-top: -40px; font-family: Montserrat, serif;">
+                    Als Grafiker liebe ich es, mit Farben zu spielen und visuelle Welten zu schaffen, die auffallen und in Erinnerung bleiben. Ich kombiniere Verspieltheit und kreative Freiheit mit einem klaren Gespür für Ästhetik, Struktur und Zielsetzung. Meine Entwürfe dürfen lebendig wirken, locker und natürlich – aber immer mit Konzept und Richtung. Ich arbeite intuitiv, aber nie zufällig: Jede Linie, jede Farbwahl und jedes Detail trägt eine Bedeutung. Dabei suche ich immer die Balance zwischen Kreativität und Klarheit – zwischen Emotion und Funktion. So entstehen Designs, die nicht nur schön aussehen, sondern auch wirken. Mein Ziel ist es, Projekte zu gestalten, die Charakter zeigen – professionell umgesetzt, aber mit einer persönlichen Note, die sie einzigartig macht.
 
 
-                <p class=" textblock">Ich unterstütze Unternehmen, Selbstständige und Privatpersonen dabei, ihre Botschaften klar und ansprechend zu kommunizieren – online wie offline. </b>             
-                </p>
+                </p>            
+            </div>
             </div>
         </div>
 
@@ -92,20 +101,24 @@
         </div>
         -->
         
-<section id="contact" class="contact-section_about fade-in">
+
+        <!-- <button id="scrollToTopBtn" class="scroll-to-top" href="header">
+                &uarr;
+        </button>
+    -->
+    </main>
+<section id="contact" class="contact-section fade-in">
+        <div class="card">
             <h2>KONTAKT</h2>
             <p>Für Projektanfragen, Kooperationen oder kreative Ideen – schreib mir einfach. Ich freue mich, von dir zu hören.</p>
             <ul class="contact-info">
-                 <li><a href="mailto:t.haefner-design@proton.me" class="fa fa-envelope"  style="font-size:36px "></a> <a href="mailto:t.haefner-design@proton.me" >t.haefner-design@proton.me</a></li>
-                <li><a href="https://www.linkedin.com/in/tristan-haefner/" class="fa fa-linkedin-square" target="_blank" style="font-size:36px "></a> <a href="https://www.linkedin.com/in/tristan-haefner/" target="_blank" >@tristan-haefner</a></li>
-                <li><a href="https://github.com/tristan-haefner" class="fa fa-github" style="font-size:36px " target="_blank"></a> <a href="https://github.com/tristan-haefner" target="_blank">@tristan-haefner</a></li>
+                 <li><a href="mailto:t.haefner-design@proton.me" class="fa fa-envelope"  style="font-size:36px "></a> <a href="mailto:t.haefner-design@proton.me" >E-Mail</a></li>
+                <li><a href="https://www.instagram.com/thaefner.design/" class="fa fa-instagram" target="_blank" style="font-size:36px "></a> <a href="https://www.instagram.com/thaefner.design/" target="_blank" >Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/tristan-haefner/" class="fa fa-linkedin-square" target="_blank" style="font-size:36px "></a> <a href="https://www.linkedin.com/in/tristan-haefner/" target="_blank" >LinkedIn</a></li>
+                <li><a href="https://github.com/tristan-haefner" class="fa fa-github" style="font-size:36px " target="_blank"></a> <a href="https://github.com/tristan-haefner" target="_blank">Github</a></li>
             </ul>
-        </section>
-        <button id="scrollToTopBtn" class="scroll-to-top" href="header">
-                &uarr;
-        </button>
-    </main>
-
+        </div>
+    </section>
    
     <script src="scripts.js"></script>
 </body>

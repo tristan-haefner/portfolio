@@ -23,14 +23,15 @@ body {
     margin: 0;
     line-height: 1.6;
     color: #333;
-    background-color: #fff;
+    background-color: #121212;
     /*background-image:  linear-gradient(#27272754 2px, transparent 2px), linear-gradient(90deg, #27272754 2px, transparent 2px), linear-gradient(#27272754 1px, transparent 1px), linear-gradient(90deg, #27272754 1px, #000000 1px);
     background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
     */
     background-attachment: fixed;
-    background-image: url(assets/grainy-background_orange.jpg);
+    background-image: url(assets/grainy-background_darkmode.jpg);
     background-size: 100%;
     background-repeat:no-repeat;
+
 
     
 }
@@ -39,19 +40,19 @@ body.about_page{
     margin: 0;
     line-height: 1.6;
     color: #333;
-    background-color: #0F0F0F;
+    background-image: url(assets/grainy-background_test1.png);
     /*background-image:  linear-gradient(#27272754 2px, transparent 2px), linear-gradient(90deg, #27272754 2px, transparent 2px), linear-gradient(#27272754 1px, transparent 1px), linear-gradient(90deg, #27272754 1px, #000000 1px);
     background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
     background-attachment: fixed;*/
-    background-image: url(assets/grainy-background_about.jpg);
+    background-color: white;
     background-size: 100%;
     background-repeat: no-repeat;
-}
 
-body.contact_page{
-    background-color: #202020;
-    background-image: none;
 }
+ body.contact_page{
+    background-image: none;
+background-color: #0F0F0F;    }
+
 
 hr{
   
@@ -64,6 +65,8 @@ hr{
 
 /* HEADER UND NAVI */
 
+
+
 /* === NEU: Layout der Top‑Navigation === */
 
 .sidebar{
@@ -74,7 +77,7 @@ hr{
     width: 100%;
     list-style:none;
     z-index: 999;
-    background-color: #f97c1692;
+    background-color: #09090992;
     flex-direction: column;
     align-items: center;
     justify-content: start;
@@ -98,13 +101,12 @@ hr{
     width: 100%;
     list-style: none;
     text-decoration: none;
-    color: #1f1f1f;
+    color: #f97d16;
     font-family: "Space Mono", monospace;
-    
-;
-
 }
-
+.sidebar a:hover{
+  text-decoration: underline;
+}
 
 .top-nav{
     display:flex;
@@ -137,43 +139,82 @@ top-nav.contact{
 
 .nav-left li a,
 .nav-right li a{
-    color:#000000;
+    color:#ffffff;
     text-decoration:none;
     font-family: "Space Mono", monospace;
     font-weight:400;
     font-style: normal;
     
 }
-body.contact_page  a{
-    color: white;
-}
 
-body.contact_page .nav-right li a{
-    border-color: white;
-}
 body.contact_page .nav-right li a:hover{
-    background-color: #1d1d1d;
+    background-image: linear-gradient(to right, #ff8c00, #c200c8);
 }
 
 
 .nav-right li a{
-    border-color: #000000;
+    /* border-color: #000000;
     padding: 5px;
     border: 2px solid #222;
+   background-image: linear-gradient(to right, #ff8c00, #ff8c00, #c200c8);*/
+
 
 }
 .nav-right li a:hover{
-    background-color: #000;
-    color: floralwhite;
+ text-decoration: underline;
 }
 
+.kontakt_button li{
+  margin: 0 auto;
+  max-width: 100%;
+  background: #0f0f0f;
+  text-align: center;
+  border-radius: 16px;
+  position: relative;
+  padding: 4px;
+}
 
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.kontakt_button li::after, .card::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #141414, #ff8c00, #c200c8);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 20px;
+  animation: 10s spin linear infinite;
+}
+.kontakt_button li::before{
+  opacity: 0.5;
+}
+
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}   
+
+.kontakt_button li:hover{
+    border-radius: 24px;
+}
 
 /* Logo */
 
 .nav-logo img{
     max-width: 200px;
-    margin-right: 70px;    
 }
 
 .nav-logo a {
@@ -182,13 +223,22 @@ body.contact_page .nav-right li a:hover{
 /* Mobile / kleine Breite: Elemente stapeln */
 @media (max-width:600px){
 
-
 /* CONTACT  */
+
+.contact_field_about{
+   display: block !important;
+
+}
+  main .contact_main{
+
+}        
   main .contact_field{
     flex-direction: column;
     justify-content: start;
-    display: flex;
+    display: block;
     width: 80%;
+    background-color: green;
+
 }
 
 main .contact_field h2{
@@ -202,13 +252,19 @@ main .contact_text{
 main .contact_right{
     width: 100%;
     justify-content: center;
+
 }
 .contact_right ul{
-    width: 80%;
+    width: 100% !important;
 }
 
 main .contact_left{
     width: 100%;
+
+}
+
+main .contact_left h2{
+     padding-left: 1rem;
 }
 
 
@@ -222,6 +278,7 @@ main .contact_left{
         background-size: auto;
         max-width: 100%;
     }
+   
 
     body .scroll-to-top{
     margin-bottom: -60px;
@@ -254,7 +311,10 @@ main .contact_left{
     }
 
    
-
+    .intro-text{
+        text-align: center;
+        margin-left: 0 !important;
+    }
     .intro-section .intro-text p {
     font-size: 1rem;    
     align-items: center;
@@ -263,7 +323,7 @@ main .contact_left{
     }
 
     .intro-section img{
-    display: none; 
+    display: none;
    }
 
     .intro-section{
@@ -298,7 +358,7 @@ main .contact_left{
 
     .modal .modal-content {
         width: 100%;   
-        max-height: 100vh;
+        max-height: 100vh !important;
     }
     
 
@@ -316,15 +376,18 @@ main .contact_left{
    
    }
   
+   .contact_right{
+    display: block !important;
+   }
 
    .contact-info{
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+   }
 
-
+   .contact-info p{
+    display: block;
    }
 
     .contact-section p{
@@ -352,6 +415,14 @@ main .contact_left{
 }
 /* ABOUT PAGE */
 
+
+   .intro-text_about{
+        max-width: 100%!important;
+        left: 0 !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+    }
+
      body.about_page{
         background-size: auto;
         max-width: 100%;
@@ -361,13 +432,35 @@ main .contact_left{
     width: 80%;
    
    }
-
-   .intro-section_about img{
-    display: none;
+ 
+   .spalten_layout{
+    max-width: 100%;
    }
 
-   .intro-section_about .intro-text_about {
-    margin-left: 0rem;
+   .aboutme_left{
+    width: 100% !important;
+   }
+
+   .aboutme_left img{
+    max-width: 1500px !important;   
+    }
+
+   .intro-section_about .aboutme_left{
+    position: relative;
+   }
+
+  
+   .intro-section_about .welcome{
+    font-size: 1.5rem !important;
+    max-width: 100% !important;
+    width: 100% !important;
+
+   }
+
+   .intro-text_about p.welcome {
+    max-width: 100% !important;
+    width: 100% !important;
+    }
 
     }
 
@@ -390,7 +483,7 @@ main .contact_left{
     width: 80%;
     }
 
-}
+
 
 
 @media (min-width: 600px){
@@ -399,7 +492,9 @@ main .contact_left{
     }
 
 }
-
+.contact-info .hideOnDesktop{
+    display: none;
+}
 .onlymobile{
     display: none;
 }
@@ -438,7 +533,7 @@ main .contact_left{
 }
 
 .intro-text {
-    color:#000;
+    color:#ffffff;
     font-family: "Montserrat", serif;
     font-size: 1.1rem;
     line-height: 1.8;
@@ -452,7 +547,7 @@ main .contact_left{
 }
 
 .intro-section .wellcome{
-    color:#000000;
+    color:#ffffff;
     text-transform: uppercase;
     font-size: 2rem;
     font-family: "Space Mono", monospace;
@@ -481,7 +576,16 @@ main .contact_left{
 .main {
     display: block; /* Ensure sections stack vertically */
     font-family: "Space Mono", monospace;
-        font-style: normal;
+    font-style: normal;
+    background-image: linear-gradient(to bottom, #0f0f0f00, #0f0f0f, #0f0f0f, #0f0f0f, #0f0f0f, #0f0f0f, #0f0f0f10);
+    padding-top: 20px;
+}
+
+.contact_main{
+    display: block; /* Ensure sections stack vertically */
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    padding-top: 20px;
 }
 
 
@@ -556,7 +660,7 @@ main .contact_left{
     left: 0;
     right: 0;
     top: 0;
-    background-color: #000000b4;
+    background-color: #000000e0;
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -566,11 +670,14 @@ main .contact_left{
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    filter: grayscale(10);
 }
 
 .project-tile:hover .cover_img_overlay{
     height: 100%;
     opacity: 1;
+    filter: none;
+
 
 }
 
@@ -615,7 +722,34 @@ main .contact_left{
     margin-top: 5rem;
     margin-bottom: 5rem;
     position: relative;
+    padding: 0;
+}
 
+.contact-section_about h2{
+    color: #000000;
+    font-size: 1.5rem;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    padding-top: 1rem;
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+}
+
+.intro-text_about h3{
+    color: #f97d16;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: 200;
+}
+
+
+.contact-section_about p{
+    color: #0F0F0F;
+    font-weight: 400;
+    font-family: "Space Mono", monospace;
+    font-size: 1em;
 }
 
 .contact-section {
@@ -626,26 +760,73 @@ main .contact_left{
     text-align: center;
     color:  #fff;
     /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.29);
+    background: rgba(0, 0, 0, 0.29);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.9px);
     -webkit-backdrop-filter: blur(4.9px);
-    border: 1px solid rgba(255, 255, 255, 0.26);
     font-weight: bold;
     align-items: center;
-
 }
+
+
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card{
+  margin: 0 auto;
+  max-width: 100%;
+  background: #0f0f0f;
+  text-align: center;
+  border-radius: 16px;
+  position: relative;
+}
+
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after, .card::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ffffff);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 16px;
+  animation: 3s spin linear infinite;
+}
+.card::before{
+  opacity: 0.5;
+}
+
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}   
 
 
 
 .contact-section h2{
-    color: #000000;
+    color: #ffffff;
     font-size: 1.5rem;
     font-optical-sizing: auto;
     font-weight: bold;
     padding-top: 1rem;
-
+    font-family: "Space Mono", monospace;
 }
 
 
@@ -672,7 +853,7 @@ main .contact_left{
 }
 
 .contact-section p{
-    color: #0F0F0F;
+    color: #ffffff;
     font-weight: 400;
     font-family: "Space Mono", monospace;
     font-size: 1em;
@@ -684,7 +865,7 @@ main .contact_left{
 
 }
 .contact-info li a{
-    color:  #0F0F0F;
+    color:  #ffffff;
     padding-top: 1rem;
     text-decoration: none;
     
@@ -703,6 +884,18 @@ main .contact_left{
     /* From https://css.glass */
     backdrop-filter: blur(4.9px);
     -webkit-backdrop-filter: blur(4.9px);
+    display:flex;
+    padding-top: 5%;
+    margin-bottom: 3rem;
+    flex-direction: row;
+}
+
+.contact_field_about{
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    width: 80%;
+    margin:  auto;
+    color:  #fff;
     display:flex;
     padding-top: 5%;
     margin-bottom: 3rem;
@@ -734,17 +927,20 @@ main .contact_left{
 }
 
 .contact_text p{
-        color: white;
+        color: #ffffff;
 }
 .contact_left h2{
-        color: #f97d16;
+        color: #ffffff;
+         padding-left: 1rem;
+         border:  #f97d16 2px;
+         border-radius: 16px;
+         border-style: solid;
 }
 .contact_right ul{
     width: 80%;
 }
 .contact_right{
     display: flex;
-    background-color: #53525261;
     border-radius: 16px;
     width: 60%;
     justify-content: center;
@@ -756,6 +952,7 @@ main .contact_left{
     color: #f97d16;
     
 }
+
 
 .contact_leistungen{
     max-width: 80%;
@@ -813,7 +1010,7 @@ main .contact_left{
 }
 
 .modal-content {
-    background: #1d1d1d;
+    background: #101010;
     border-radius: 8px;
     width: 80%;   
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -935,6 +1132,21 @@ main .contact_left{
 }
 
 
+/*PROJECT IMG MOBILE ANPASSUNGEN*/
+@media (max-width:600px){
+#project5 img{
+    max-width: 100%;
+}
+
+#project4 img{
+    max-width: 100%;
+}
+
+
+}/*ende mobile project img anpassung*/
+
+
+
 .projectinformation{
     display:flex;
     justify-content:space-between;
@@ -1000,79 +1212,68 @@ body {
 
 
 /* ABOUT ME SECTION  */
+  .main_about{
+    display: block; /* Ensure sections stack vertically */
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    padding-left: 3rem;
+    padding-right: 3rem;
 
+   }
 
 .intro-section_about{
-    
-    display: flex;
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
+    display: flex;
     
 
 }
 .intro-section_about .welcome{
-    color:#000000;
+    color:#ffffff;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: "Space Mono", monospace;
     font-weight:400;
     font-style: normal;
-}
-.intro-section_about img {
-    max-width: 100%;
-    object-fit: cover;
+    width: 500px;
 }
 
 
+.aboutme_left{
+    position: fixed;
+    width: 40%;
+    display: block;
+}
+.aboutme_left img{
+    width: 100%;
+}
 
 .intro-text{
     margin-left: 2rem;
 }
 
 .intro-text_about{
-    padding: 1rem;
-    margin-left: 2rem;
-    font-family: "Montserrat", sans-serif;
+    padding-left: 2.5rem;
+    font-family: Space "Mono", monospace;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-}
-
-
-
-.about_text{
-    max-width: 90%;
-    margin:  0 auto;
-    text-align: left;
-    justify-content: center;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    background: rgba(0, 0, 0, 0.449);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(4.9px);
-
-    
-    border-radius: 16px;
+    position: relative;
+    left: 40%;
+    width: calc(100% - 45%);
+    display: block;
     color: white;
+
 }
 
-.about_text li,p{
-    padding: 1rem;
-}
-.about_text h2{
-    font-family: "Space Mono", monospace;
-    font-weight:400;
+
+.about_text {
+    font-family: "Montserrat", serif;
+    font-weight: 600;
     font-style: normal;
     padding: 1rem;
 
 }
 
-.textblock{
-    color: #f97d16;
-}
+
+

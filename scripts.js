@@ -5,12 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("project-modal");
     const projectDetails = document.getElementById("project-details");
     const closeButton = document.querySelector(".close-button");
-    const toggleBtn = document.getElementById('darkmode-toggle');
     const body = document.body;
+    scrollToTopBtn = document.getElementById("scrollToTopBtnconst");
+
 
     
 
     // Nur fortfahren, wenn das Modal existiert
+   
     if (modal) {
 
         // Open project modal
@@ -54,77 +56,58 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Fade-in animation for project tiles
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        },
-        {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        }
-    );
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            },
+            {
+                threshold: 0.1, // Trigger when 10% of the element is visible
+            }
+        );
 
-    fadeIn.forEach((tile) => {
-        observer.observe(tile);
-    });
-
-    // Scroll-to-top button
-    scrollToTopBtn?.addEventListener("click", () => {
-        console.log("Button clicked"); // Testausgabe
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+        fadeIn.forEach((tile) => {
+            observer.observe(tile);
         });
-    });
 
-    // Sidebar öffnen/schließen
-    const navLogo = document.querySelector('.nav-logo');
-    if (navLogo) {
-        navLogo.addEventListener('click', showSidebar);
-    }
+        // Scroll-to-top button
+        scrollToTopBtn?.addEventListener("click", () => {
+            console.log("Button clicked"); // Testausgabe
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    
 
-    function showSidebar() {
+
+        // Sidebar öffnen/schließen
+        const navLogo = document.querySelector('.nav-logo');
+        if (navLogo) {
+            navLogo.addEventListener('click', showSidebar);
+        }
+
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            if (sidebar) sidebar.style.display = 'flex';
+        }
+
         const sidebar = document.querySelector('.sidebar');
-        if (sidebar) sidebar.style.display = 'flex';
-    }
+        if (sidebar) {
+            sidebar.addEventListener('click', hideSidebar);
+        }
 
-    const sidebar = document.querySelector('.sidebar');
-    if (sidebar) {
-        sidebar.addEventListener('click', hideSidebar);
-    }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            if (sidebar) sidebar.style.display = 'none';
+        }
 
-    function hideSidebar() {
-        const sidebar = document.querySelector('.sidebar');
-        if (sidebar) sidebar.style.display = 'none';
-    }
-
-    window.showSidebar = showSidebar;
-    window.hideSidebar = hideSidebar;
+        window.showSidebar = showSidebar;
+        window.hideSidebar = hideSidebar;
+            
+       
 });
-    const cursor = document.querySelectorAll(".cursor");
-const links = document.querySelectorAll(".link");
 
-window.addEventListener("mousemove", (e) => {
-  
-  let x = e.pageX;
-  let y = e.pageY;
-  
-  cursor.forEach(el => {
-    el.style.left = `${x}px`;
-    el.style.top = `${y}px`;
-    
-    links.forEach(link => {
-      link.addEventListener("mouseenter", () => {
-        el.classList.add("hover");
-      })
-      link.addEventListener("mouseleave", () => {
-        el.classList.remove("hover");
-      })
-    })
-    
-  })
-  
-})
