@@ -147,9 +147,6 @@ top-nav.contact{
     
 }
 
-body.contact_page .nav-right li a:hover{
-    background-image: linear-gradient(to right, #ff8c00, #c200c8);
-}
 
 
 .nav-right li a{
@@ -1034,7 +1031,7 @@ main .contact_left h2{
     color: #ffffff;
     font-family: "Space Mono", monospace;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 400;
     padding: 1rem;
     padding-left: 2rem;
