@@ -28,7 +28,7 @@ body {
     background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
     */
     background-attachment: fixed;
-    background-image: url(assets/grainy-background_darkmode.jpg);
+    background-image: url(assets/newbg1.png);
     background-size: 100%;
     background-repeat:no-repeat;
 
@@ -226,9 +226,7 @@ top-nav.contact{
    display: block !important;
 
 }
-  main .contact_main{
-
-}        
+   
   main .contact_field{
     flex-direction: column;
     justify-content: start;
@@ -951,24 +949,9 @@ main .contact_left h2{
 }
 
 
-.contact_leistungen{
-    max-width: 80%;
-    margin:  0 auto;
-    text-align: left;
-    justify-content: center;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        background-color: #fffafa1f;
 
-    border-radius: 16px;
-}
 
-.contact_leistungen li,p{
-    padding: 1rem;
-}
+
 .contact_leistungen h2{
     font-family: "Space Mono", monospace;
     font-weight:400;
@@ -1270,6 +1253,49 @@ body {
     font-style: normal;
     padding: 1rem;
 
+}
+
+body.impressum{
+    background-color: red;
+}
+
+.footer{
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    
+
+}
+
+.footer_card ul{
+    list-style-type: none;
+    
+    }
+.footer_card li{
+    float: left;
+    background-color: white;
+}
+.footer_card  a{
+    color: black;
+    list-style-type: none;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    
+}
+
+.footer_card a:hover{
+    text-decoration: underline;
+}
+
+.impressum_datenschutz{
+    max-width: 90%;
+    margin: 0 auto;
+    color: black;
+    text-align: left;
 }
 
 
