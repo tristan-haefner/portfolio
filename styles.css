@@ -2,6 +2,7 @@
 html{
     scroll-behavior: smooth;
 
+
 }
 
 
@@ -28,7 +29,7 @@ body {
     background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
     */
     background-attachment: fixed;
-    background-image: url(assets/newbg1.png);
+    background-image: url(assets/grainy-background_smily.jpg);
     background-size: 100%;
     background-repeat:no-repeat;
 
@@ -40,7 +41,7 @@ body.about_page{
     margin: 0;
     line-height: 1.6;
     color: #333;
-    background-image: url(assets/grainy-background_test1.png);
+    background-image: url(assets/grainy-background_bloom.jpg);
     /*background-image:  linear-gradient(#27272754 2px, transparent 2px), linear-gradient(90deg, #27272754 2px, transparent 2px), linear-gradient(#27272754 1px, transparent 1px), linear-gradient(90deg, #27272754 1px, #000000 1px);
     background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
     background-attachment: fixed;*/
@@ -51,6 +52,7 @@ body.about_page{
 }
  body.contact_page{
     background-image: none;
+    background-image: url(assets/grainy-background_black.jpg);
 background-color: #0F0F0F;    }
 
 
@@ -182,7 +184,7 @@ top-nav.contact{
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: conic-gradient(from var(--angle), #141414, #ff8c00, #c200c8);
+  background-image: conic-gradient(from var(--angle), #141414, #ff8c00, #c200c8, #f10754);
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -316,6 +318,8 @@ main .contact_left h2{
     justify-content: center;
     justify-items: center;
     }
+
+    
 
     .intro-section img{
     display: none;
@@ -520,6 +524,7 @@ main .contact_left h2{
     margin-top: 1rem;
     text-align: left;
     justify-content: center;
+
 }
 
 .intro-section img {
@@ -573,7 +578,7 @@ main .contact_left h2{
     font-family: "Space Mono", monospace;
     font-style: normal;
     background-image: linear-gradient(to bottom, #0f0f0f00, #0f0f0f, #0f0f0f, #0f0f0f, #0f0f0f, #0f0f0f, #0f0f0f10);
-    padding-top: 20px;
+    padding-top: 250px;
 }
 
 .contact_main{
@@ -919,17 +924,16 @@ main .contact_left h2{
 .contact_left{
     width: 80%;
 
+;
+
 }
 
 .contact_text p{
         color: #ffffff;
 }
 .contact_left h2{
-        color: #ffffff;
-         padding-left: 1rem;
-         border:  #f97d16 2px;
-         border-radius: 16px;
-         border-style: solid;
+        color: #f10754;
+         
 }
 .contact_right ul{
     width: 80%;
@@ -1251,12 +1255,15 @@ body {
     font-family: "Montserrat", serif;
     font-weight: 600;
     font-style: normal;
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
 }
 
 body.impressum{
-    background-color: red;
+    background-color: white;
+    background-image: none;
+
 }
 
 .footer{
@@ -1279,6 +1286,7 @@ body.impressum{
 }
 .footer_card  a{
     color: black;
+    font-family: "Space Mono", monospace;
     list-style-type: none;
     text-decoration: none;
     display: block;
@@ -1294,7 +1302,7 @@ body.impressum{
 .impressum_datenschutz{
     max-width: 90%;
     margin: 0 auto;
-    color: black;
+    color: white;
     text-align: left;
 }
 
