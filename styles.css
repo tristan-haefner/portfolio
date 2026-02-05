@@ -228,6 +228,12 @@ top-nav.contact{
    display: block !important;
 
 }
+.intro-text_about h3{
+    color: #1693f9;
+
+    padding-top: 1rem;
+ 
+}
    
   main .contact_field{
     flex-direction: column;
